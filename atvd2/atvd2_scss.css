@@ -1,0 +1,12 @@
+.caixa {
+  color: #e74c3c;
+}
+
+h1 {
+  font-size: 34px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=atvd2_scss.css.map */

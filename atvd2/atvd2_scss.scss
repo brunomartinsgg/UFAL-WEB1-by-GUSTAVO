@@ -1,0 +1,13 @@
+$primary-color: #e74c3c;
+
+.caixa {
+    color: $primary-color;
+
+}
+h1 {
+    font-size: 34px;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}

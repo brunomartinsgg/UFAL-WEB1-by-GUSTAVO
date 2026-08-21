@@ -1,0 +1,17 @@
+p {
+    font-weight: bold;
+}
+
+body {
+    background-image: url("https://static0.srcdn.com/wordpress/wp-content/uploads/2020/01/Michael-Scott-The-Office-5-Worst-Things-Dunder-Mifflin-Has-Done-feature-image-jpeg.jpg");
+    background-size: 95%;
+}
+
+button{
+
+    background-color: #2980b9;
+}
+button:hover{
+
+color: #e67e22;
+}
