@@ -3,7 +3,6 @@ import banho from '../assets/banho.jpg'
 import consulta from '../assets/consulta.jpg'
 import hospedagem from '../assets/hospedagem.jpg'
 
-// Seção de serviços: usa o mesmo componente 3 vezes
 function Servicos() {
   return (
     <section id="servicos" className="secao">

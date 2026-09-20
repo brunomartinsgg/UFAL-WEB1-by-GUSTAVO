@@ -1,4 +1,3 @@
-// Componente reutilizável: recebe os dados por props
 function ServiceCard(props) {
   return (
     <article className="card">

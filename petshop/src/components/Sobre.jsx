@@ -1,4 +1,3 @@
-// Seção sobre o petshop
 function Sobre() {
   return (
     <section id="sobre" className="secao fundo-claro">

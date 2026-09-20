@@ -1,4 +1,3 @@
-// Seção de contato: link para o WhatsApp
 function Contato() {
   return (
     <section id="contato" className="secao">

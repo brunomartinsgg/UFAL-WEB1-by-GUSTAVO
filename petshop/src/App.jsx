@@ -5,7 +5,6 @@ import Sobre from './components/Sobre'
 import Contato from './components/Contato'
 import Footer from './components/Footer'
 
-// O site é dividido em partes (componentes)
 function App() {
   return (
     <>

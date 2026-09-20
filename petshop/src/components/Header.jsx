@@ -1,4 +1,3 @@
-// Cabeçalho: nome do petshop e menu
 function Header() {
   return (
     <header className="header">
