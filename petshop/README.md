@@ -1,4 +1,4 @@
-# PetShop Amigo Fiel
+# PetShop do Totó
 
 Site de um petshop, feito com React para a disciplina de Programação Web I (UFAL).
 
@@ -34,4 +34,4 @@ npm run dev
 
 ## Site online
 
-[colar aqui o link do site publicado]
+[https://ufal-web-1-by-gustavo.vercel.app/]
