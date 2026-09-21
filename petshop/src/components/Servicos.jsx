@@ -1,7 +1,4 @@
 import ServiceCard from './ServiceCard'
-import banho from '../assets/banho.jpg'
-import consulta from '../assets/consulta.jpg'
-import hospedagem from '../assets/hospedagem.jpg'
 
 function Servicos() {
   return (
