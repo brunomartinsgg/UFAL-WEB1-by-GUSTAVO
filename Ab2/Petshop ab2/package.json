@@ -1,0 +1,22 @@
+{
+  "name": "petshop-ab2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js --configLoader native",
+    "build": "node ./node_modules/vite/bin/vite.js build --configLoader native",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --configLoader native"
+  },
+  "dependencies": {
+    "firebase": "^11.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.2.0"
+  }
+}
