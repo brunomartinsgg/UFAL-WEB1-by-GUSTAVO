@@ -52,7 +52,7 @@ h3 {
   margin-top: 24px;
 }
 
-/* Header e Navegação (Flexbox) */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -99,7 +99,6 @@ h3 {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Cards de Serviços */
 .cards {
   display: flex;
   justify-content: center;
@@ -148,7 +147,6 @@ h3 {
   color: #e76f51;
 }
 
-/* Botões */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -171,7 +169,6 @@ h3 {
   width: 100%;
 }
 
-/* Agendamento e Banco de Dados */
 .painel-agendamento {
   display: flex;
   justify-content: center;
@@ -298,7 +295,6 @@ h3 {
   font-style: italic;
 }
 
-/* Rodapé */
 .footer {
   display: flex;
   justify-content: center;
