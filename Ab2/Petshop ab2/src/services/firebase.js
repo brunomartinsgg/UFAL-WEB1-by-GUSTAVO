@@ -8,7 +8,6 @@ import {
   doc,
 } from 'firebase/firestore'
 
-// Configuração do Firebase (substitua pelas chaves do seu projeto no console.firebase.google.com se desejar usar nuvem)
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'SUA_API_KEY',
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'petshop-do-toto.firebaseapp.com',
@@ -30,26 +29,8 @@ if (isFirebaseConfigured) {
 const STORAGE_KEY = 'petshop_toto_agendamentos_db'
 
 const dadosIniciais = [
-  {
-    id: 'ag-1',
-    tutor: 'Maria Oliveira',
-    telefone: '(82) 99911-2233',
-    pet: 'Thor',
-    especie: 'Cachorro',
-    servico: 'Banho e tosa',
-    data: '2026-11-20',
-    horario: '09:00',
-  },
-  {
-    id: 'ag-2',
-    tutor: 'João Pedro',
-    telefone: '(82) 98844-5566',
-    pet: 'Luna',
-    especie: 'Gato',
-    servico: 'Consulta veterinária',
-    data: '2026-11-21',
-    horario: '14:30',
-  },
+  { id: 'ag-1', tutor: 'Maria Oliveira', pet: 'Thor', servico: 'Banho e tosa' },
+  { id: 'ag-2', tutor: 'João Pedro', pet: 'Luna', servico: 'Consulta veterinária' },
 ]
 
 function lerBancoLocal() {
@@ -78,12 +59,8 @@ export async function salvarAgendamento(novoAgendamento) {
     return { id: docRef.id, ...novoAgendamento }
   }
   const listaAtual = lerBancoLocal()
-  const registroComId = {
-    id: 'ag-' + Date.now(),
-    ...novoAgendamento,
-  }
-  const novaLista = [registroComId, ...listaAtual]
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(novaLista))
+  const registroComId = { id: 'ag-' + Date.now(), ...novoAgendamento }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify([registroComId, ...listaAtual]))
   return registroComId
 }
 

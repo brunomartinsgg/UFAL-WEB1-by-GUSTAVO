@@ -27,7 +27,7 @@ h3 {
 }
 
 .secao {
-  padding: 40px 32px;
+  padding: 40px 24px;
   text-align: center;
   max-width: 1100px;
   margin: 0 auto;
@@ -42,7 +42,7 @@ h3 {
 .texto {
   font-size: 18px;
   max-width: 650px;
-  margin: 0 auto 28px auto;
+  margin: 0 auto 24px auto;
   color: #555555;
 }
 
@@ -50,10 +50,9 @@ h3 {
   background-color: #f1f7f6;
   border-radius: 12px;
   margin-top: 24px;
-  margin-bottom: 24px;
 }
 
-/* Header e Navegação */
+/* Header e Navegação (Flexbox) */
 .header {
   display: flex;
   justify-content: space-between;
@@ -61,9 +60,8 @@ h3 {
   flex-wrap: wrap;
   gap: 16px;
   background-color: #2a9d8f;
-  color: white;
+  color: #ffffff;
   padding: 16px 32px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -73,16 +71,16 @@ h3 {
 }
 
 .logo-icon {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .header h1 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -95,65 +93,10 @@ h3 {
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 6px;
-  transition: background-color 0.2s;
 }
 
 .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Filtros e Busca */
-.filtros-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.campo-busca {
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 8px;
-  padding: 8px 14px;
-  width: 280px;
-}
-
-.icone-busca {
-  color: #888888;
-  margin-right: 8px;
-}
-
-.campo-busca input {
-  border: none;
-  outline: none;
-  font-size: 15px;
-  width: 100%;
-}
-
-.botoes-filtro {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.filtro-btn {
-  padding: 8px 16px;
-  border: 1px solid #2a9d8f;
-  background-color: #ffffff;
-  color: #2a9d8f;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.filtro-btn.ativo,
-.filtro-btn:hover {
-  background-color: #2a9d8f;
-  color: #ffffff;
 }
 
 /* Cards de Serviços */
@@ -170,15 +113,27 @@ h3 {
   border: 1px solid #dddddd;
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.card img:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
 .card h3 {
   font-size: 22px;
-  margin: 10px 0 8px 0;
+  margin: 12px 0 8px 0;
   color: #264653;
 }
 
@@ -193,41 +148,6 @@ h3 {
   color: #e76f51;
 }
 
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.card img:hover {
-  opacity: 0.85;
-  transform: scale(1.02);
-}
-
-.badge-categoria {
-  margin-top: 12px;
-  background-color: #e9f5f3;
-  color: #2a9d8f;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 12px;
-}
-
-.detalhes-servico {
-  background-color: #f8f9fa;
-  border-left: 3px solid #2a9d8f;
-  padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #555555;
-  text-align: left;
-}
-
 /* Botões */
 .botao {
   display: inline-flex;
@@ -237,7 +157,7 @@ h3 {
   margin-top: 12px;
   padding: 12px 24px;
   background-color: #25d366;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   border: none;
@@ -246,34 +166,12 @@ h3 {
   font-size: 15px;
 }
 
-.botao:hover {
-  opacity: 0.92;
-}
-
 .botao-card {
   background-color: #2a9d8f;
   width: 100%;
 }
 
-.botao-secundario {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: transparent;
-  color: #264653;
-  border: 1px solid #cccccc;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 6px;
-}
-
-.botao-secundario:hover {
-  background-color: #eeeeee;
-}
-
-/* Página de Agendamento e Banco de Dados */
+/* Agendamento e Banco de Dados */
 .painel-agendamento {
   display: flex;
   justify-content: center;
@@ -283,14 +181,14 @@ h3 {
   text-align: left;
 }
 
-.formulario-card {
+.formulario-card,
+.lista-banco-card {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 12px;
   padding: 24px;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .formulario-card h3,
@@ -299,14 +197,13 @@ h3 {
   align-items: center;
   gap: 8px;
   color: #264653;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .campo-form {
   display: flex;
   flex-direction: column;
   margin-bottom: 14px;
-  width: 100%;
 }
 
 .campo-form label {
@@ -324,32 +221,15 @@ h3 {
   font-size: 15px;
 }
 
-.linha-form {
-  display: flex;
-  gap: 12px;
-}
-
 .botao-submit {
   width: 100%;
   background-color: #2a9d8f;
-  margin-top: 8px;
-}
-
-.lista-banco-card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 12px;
-  padding: 24px;
-  flex: 1;
-  min-width: 320px;
-  max-width: 560px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .lista-agendamentos {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .agendamento-card {
@@ -360,44 +240,26 @@ h3 {
   border: 1px solid #e0e0e0;
   border-left: 4px solid #2a9d8f;
   border-radius: 8px;
-  padding: 14px 16px;
-  background-color: #fcfcfc;
-}
-
-.agendamento-topo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
+  padding: 12px 14px;
 }
 
 .pet-nome {
+  margin: 0 0 4px 0;
   font-weight: bold;
-  font-size: 17px;
   color: #264653;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.servico-tag {
-  background-color: #fde8e2;
+.pet-nome span {
   color: #e76f51;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 3px 10px;
-  border-radius: 12px;
 }
 
 .agendamento-detalhe {
-  margin: 4px 0;
+  margin: 0;
   font-size: 14px;
   color: #555555;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
 }
 
 .botao-excluir {
@@ -413,10 +275,6 @@ h3 {
   font-weight: bold;
 }
 
-.botao-excluir:hover {
-  opacity: 0.9;
-}
-
 .alerta-erro {
   background-color: #fde8e2;
   color: #c0392b;
@@ -427,9 +285,6 @@ h3 {
 }
 
 .alerta-sucesso {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   background-color: #e6f4ea;
   color: #1e7e34;
   padding: 10px 12px;
@@ -441,37 +296,6 @@ h3 {
 .mensagem-vazia {
   color: #777777;
   font-style: italic;
-  padding: 20px 0;
-}
-
-/* Página Sobre e Contato */
-.sobre-cards {
-  margin-top: 20px;
-  margin-bottom: 24px;
-}
-
-.icone-destaque {
-  font-size: 36px;
-  color: #2a9d8f;
-  margin-bottom: 8px;
-}
-
-.bloco-extra {
-  margin-top: 20px;
-}
-
-.caixa-horarios {
-  max-width: 420px;
-  margin: 16px auto 0 auto;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  padding: 16px;
-}
-
-.contato-form {
-  margin: 28px auto 0 auto;
-  text-align: left;
 }
 
 /* Rodapé */
@@ -480,7 +304,7 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: #264653;
-  color: white;
+  color: #ffffff;
   padding: 16px;
 }
 
